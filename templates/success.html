@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Success</title>
+    <style>
+        .main{
+            height: 500px;
+            width: 800px;
+        }
+
+         h1{
+            height: 80px;
+            width: 500px;
+            background-color: green;
+            border-color: solid black;
+        }
+    </style>
+</head>
+<body>
+    <div class="main">
+    <div class="h1">
+        <h1>Thank you ___. Your seat is now reserved!</h1>
+    </div>
+    <a href="/">Goback</a>
+    <h2>Email Address Entered:</h2>
+    <table>
+        <th>{{allemails}}</th>
+        {%for email in allemails %}
+        <tr>
+            <td>{{email["email"]}}</td>
+        </tr>
+        {%endfor%}
+    </table>
+</div>
+</body>
+</html>

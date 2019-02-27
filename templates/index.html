@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Emailvalidation</title>
+    <style>
+        .error{
+            background-color: red;
+            width: 400px;
+        }
+    </style>
+</head>
+<body>
+    
+        <h1>Email Validation</h1>
+        <form action="/process" method="POST">
+         
+            Email: <input type="text" name="email" value="">
+            {% with errors = get_flashed_messages(category_filter=["email"]) %}
+            {% if errors %}
+                {% for msg in errors %}
+                    <p class="error">{{ msg }}</p>
+                {% endfor %}
+            {% endif %}
+            {% endwith %}
+           
+            <input type="submit" value=" submit" class="blue">
+        </form>
+    
+</body>
+</html>
